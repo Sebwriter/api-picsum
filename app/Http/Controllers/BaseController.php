@@ -10,7 +10,7 @@ class BaseController extends Controller
     /**
      * success response method.
      * 
-     * @return \Illuminate\Http\Response;
+     * @return \Illuminate\Http\Response
      */
     public function sendResponse($result, $message)
     {

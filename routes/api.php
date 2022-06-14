@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AuthPictureController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,7 @@ Route::controller(RegisterController::class)->group(function() {
 });
 
 Route::apiResource('picture', '\App\Http\Controllers\PictureController');
+
+Route::middleware('auth:sanctum')->group(function() {
+    Route::resource('authpicture', AuthPictureController::class);
+});
